@@ -7,8 +7,8 @@ import histogram_library as his
 
 def load_data(slice,subject,nu,image):
     
-    #path = 'C:\Users\FarivarLabPC\OneDrive - McGill University\Virtual_Machine\MEMPRAGE-Dehydration\cedar_dehyd_study\\analysis\\filter\\filter'
-    path = 'C:\Users\FarivarLabPC\OneDrive - McGill University\Virtual_Machine\MEMPRAGE-Dehydration\cedar_dehyd_study\\analysis\\filter\\filter\\meanimage'
+    path = 'C:\Users\FarivarLabPC\OneDrive - McGill University\Virtual_Machine\MEMPRAGE-Dehydration\cedar_dehyd_study\\analysis\\filter\\filter'
+    #path = 'C:\Users\FarivarLabPC\OneDrive - McGill University\Virtual_Machine\MEMPRAGE-Dehydration\cedar_dehyd_study\\analysis\\filter\\filter\\meanimage'
     
     #--------- Paths --------------------
     nu_path = str(path)+str(nu)
