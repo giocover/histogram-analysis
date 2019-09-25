@@ -8,4 +8,6 @@ This algorithm generates cortical gray matter and white matter histograms. As in
 * wm.mgz
 * wm.seg.mgz
 
+As an output, a mean histogram should look like this:
+
 ![Test Image 4](https://user-images.githubusercontent.com/32575426/65618667-ac430680-df8c-11e9-854e-10baf6caa33f.png)
