@@ -7,3 +7,4 @@ This algorithm generates cortical gray matter and white matter histograms. As in
 * rh.ribbon.mgz
 * wm.mgz
 * wm.seg.mgz
+![Test Image 4](https://github.com/tograh/testrepository/3DTest.png)
