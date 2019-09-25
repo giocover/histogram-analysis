@@ -2,9 +2,9 @@
 import numpy as np
 import histogram_library as his
 
-#subjects = ['tp2tomean1to6','tp2tomean1to6_filt','tp4tomean1to6','tp4tomean1to6_filt','tp5tomean1to6','tp5tomean1to6_filt','tp6tomean1to6','tp6tomean1to6_filt']
+subjects = ['tp2tomean1to6','tp2tomean1to6_filt','tp4tomean1to6','tp4tomean1to6_filt','tp5tomean1to6','tp5tomean1to6_filt','tp6tomean1to6','tp6tomean1to6_filt']
 
-subjects = ['meanimage_filt','meanimage_nofilt']
+#subjects = ['meanimage_filt','meanimage_nofilt']
             
 for i,j in enumerate(subjects):
 
@@ -26,7 +26,7 @@ for i,j in enumerate(subjects):
     # ---------------------------------------- Main Script -------------------------------------------- #
     for slice in slices:
         
-        # ---------------- loading WM and GM files -------------------- #
+        # ------------------------------- loading WM and GM files -------------------- #
         wm, gm = his.load_data(slice, subject = str(subject), nu = str(nu), image='yes')
         # ----------------------------- calculating histogram ---------------------------------- #
         hist_mat = his.hist_calc(wm, gm, 20, slice, hist_mat, subject = str(subject), image='yes')
