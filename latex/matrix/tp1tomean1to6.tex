@@ -1,0 +1,21 @@
+ \begin{tikzpicture}[scale=1]
+                \begin{axis}[
+                            yticklabels={,,},
+                            xtick=data,
+                            xticklabels={$0$,,,,,,,,,$0.5$,,,,,,,,,$1$},
+                            legend style={at={(0.78,0.98)},
+	                        anchor=north,legend columns=-1},
+                            ymajorgrids={true},
+                            xmajorgrids={true},
+                            %grid=major, 
+                            grid style={dashed,gray!10},
+                            legend style={color=gray,fill=none}
+                            ] 
+                            \addplot[smooth, color=primary!80!black, mark=star, fill opacity=0.5, opacity=0.5]
+                            table[x=index,y=gm_mean,col sep=comma]{matrix/final_matrix_tp5tomean1to6.csv};
+                            \addlegendentry{\footnotesize{\color{gray}GM}}
+                            \addplot[smooth, color=secondary!80!black, mark=x, fill opacity=0.5, opacity=0.5]
+                            table[x=index,y=wm_gm_mean,col sep=comma]{matrix/final_matrix_tp5tomean1to6.csv};
+                            \addlegendentry{\footnotesize{\color{gray}WM}};
+                \end{axis}
+            \end{tikzpicture}\vspace*{-0.5cm}\hspace{0.4cm}

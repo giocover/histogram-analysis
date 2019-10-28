@@ -1,0 +1,15 @@
+\begin{tikzpicture}[
+                        spy using outlines=
+                        {circle,
+                         magnification=3,
+                         size=5cm,
+                         connect spies
+                        }
+                   ]
+    \node[inner sep=0pt] {
+                            \pgfimage[width=1\textwidth]{figures/tp5tomean1to6_filt.png}
+                         };
+    \only<1>{
+                            \spy[primary] on (1.5,1.5) in node at (-0.15\textwidth,-1)
+                         ;}
+\end{tikzpicture}

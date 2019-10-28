@@ -1,0 +1,195 @@
+\input{makros.tex}
+
+\begin{document}
+
+\section*{Histogram Analysis}
+	\vspace*{-0.4cm}\rule{10cm}{0.1mm}
+	
+	\Large{This algorithm analyses the brain as a whole volume. The input is a MEMPRAGE image, along with the segmentation files from Freesurfer for white and cortical gray matter segmentation. An example of a coronal slice, cortical gray matter masked and white matter mask used to compute the histograms can be viewed here.} 
+	
+	\begin{figure}[!h]
+        \centering
+            \begin{minipage}{0.17\linewidth}
+                \includegraphics[width=\textwidth]{figures/full_head.png}
+            \end{minipage}
+            \begin{minipage}{0.17\linewidth}
+                \includegraphics[width=\textwidth]{figures/gray_matter.png}
+            \end{minipage}
+            \begin{minipage}{0.17\linewidth}
+                \includegraphics[width=\textwidth]{figures/white_matter.png}
+            \end{minipage}
+            
+            \begin{minipage}{0.17\linewidth}
+                \centering MEMPRAGE - coronal slice
+            \end{minipage}
+            \begin{minipage}{0.17\linewidth}
+                \centering cortical gray matter mask
+            \end{minipage}
+            \begin{minipage}{0.17\linewidth}
+                \centering white matter mask
+            \end{minipage}
+            \vspace{-1cm}
+    \end{figure}
+
+\subsection*{MRI Raw Analysis}
+	\vspace*{-0.5cm}\rule{5cm}{0.1mm}
+	
+	\Large{Six MR images using the MEMPRAGE sequence were acquired from a Siemens 3T TrioTrim MR scanner, with a 0.5mm isotropic voxel size (TR=2530ms, TE=2.45, BW=548Hz/px, 480x480 matrix, 3D acquisition). By using the white and cortical gray matter masks, a histogram was computed for each acquisition.} 
+	
+    \begin{figure}[!h]
+        \centering
+        \begin{minipage}{0.17\linewidth}
+            \input{figures/tp1tomean1to6.tex}
+        \end{minipage}
+        \begin{minipage}{0.17\linewidth}
+            \input{figures/tp2tomean1to6.tex}
+        \end{minipage}
+        \begin{minipage}{0.17\linewidth}
+            \input{figures/tp4tomean1to6.tex}
+        \end{minipage}
+        \begin{minipage}{0.17\linewidth}
+            \input{figures/tp5tomean1to6.tex}
+        \end{minipage}
+        \begin{minipage}{0.17\linewidth}
+            \input{figures/tp1tomean1to6.tex}
+        \end{minipage}
+        \vspace{-0.8cm}
+    \end{figure}
+
+    \begin{figure}[!h]
+        \vspace{-0.1cm}
+        \begin{minipage}{0.17\linewidth}
+            \centering \hspace{4.07cm} tp1tomean1to6.nii
+        \end{minipage}
+        \begin{minipage}{0.17\linewidth}
+            \centering \hspace{4.07cm} tp2tomean1to6.nii
+        \end{minipage}
+        \begin{minipage}{0.17\linewidth}
+            \centering \hspace{4.07cm} tp3tomean1to6.nii
+        \end{minipage}
+        \begin{minipage}{0.17\linewidth}
+            \centering \hspace{4.07cm} tp4tomean1to6.nii
+        \end{minipage}
+        \begin{minipage}{0.17\linewidth}
+            \centering \hspace{4.07cm} tp5tomean1to6.nii
+        \end{minipage}
+        \vspace{-0.5cm}
+    \end{figure}
+        
+    \begin{figure}[!h]
+        \centering
+        \hspace{-0.5cm}
+        \begin{minipage}{0.17\linewidth}
+                \input{matrix/tex_files/tp1tomean1to6.tex}
+        \end{minipage}
+        \begin{minipage}{0.17\linewidth}
+                \input{matrix/tex_files/tp2tomean1to6.tex}
+        \end{minipage}  
+        \begin{minipage}{0.17\linewidth}
+                \input{matrix/tex_files/tp4tomean1to6.tex}
+        \end{minipage}  
+        \begin{minipage}{0.17\linewidth}
+                \input{matrix/tex_files/tp5tomean1to6.tex}
+        \end{minipage}  
+        \begin{minipage}{0.17\linewidth}
+                \input{matrix/tex_files/tp1tomean1to6.tex}
+        \end{minipage}  
+    \end{figure}
+
+\pagebreak
+
+\subsection*{Filtered MRI Analysis}
+	\vspace*{-0.5cm}\rule{5cm}{0.1mm}
+	
+	\Large{Each MRI acquisition was filtered using a nonlocal means denoising algorithm and a histogram was computed again for each filtered image. The filter algorithm source can be viewd at: \url{https://sites.google.com/site/pierrickcoupe/softwares/denoising-for-medical-imaging/mri-denoising/mri-denoising-software}.} 
+	
+    \begin{figure}[!h]
+        \centering
+            \begin{minipage}{0.17\linewidth}%\hspace{-1cm}
+                \input{figures/tp1tomean1to6_filt.tex}
+            \end{minipage}
+            \begin{minipage}{0.17\linewidth}%\hspace{-4cm}
+                \input{figures/tp2tomean1to6_filt.tex}
+            \end{minipage}
+            \begin{minipage}{0.17\linewidth}%\hspace{-7cm}
+                \input{figures/tp4tomean1to6_filt.tex}
+            \end{minipage}
+            \begin{minipage}{0.17\linewidth}%\hspace{-8cm}
+                \input{figures/tp5tomean1to6_filt.tex}
+            \end{minipage}
+            \begin{minipage}{0.17\linewidth}%\hspace{-8cm}
+                \input{figures/tp1tomean1to6_filt.tex}
+            \end{minipage}
+            \vspace{-0.8cm}
+    \end{figure}
+
+    \begin{figure}[!h]
+        \vspace{-0.1cm}
+        \begin{minipage}{0.17\linewidth}
+            \centering \hspace{3.62cm} tp1tomean1to6$_$filt.nii
+        \end{minipage}
+        \begin{minipage}{0.17\linewidth}
+            \centering \hspace{3.62cm} tp2tomean1to6$_$filt.nii
+        \end{minipage}
+        \begin{minipage}{0.17\linewidth}
+            \centering \hspace{3.62cm} tp3tomean1to6$_$filt.nii
+        \end{minipage}
+        \begin{minipage}{0.17\linewidth}
+            \centering \hspace{3.62cm} tp4tomean1to6$_$filt.nii
+        \end{minipage}
+        \begin{minipage}{0.17\linewidth}
+            \centering \hspace{3.62cm} tp5tomean1to6$_$filt.nii
+        \end{minipage}
+        \vspace{-0.5cm}
+    \end{figure}
+    
+    \begin{figure}[!h]
+        \centering
+        \hspace{-0.5cm}
+        \begin{minipage}{0.17\linewidth}
+                \input{matrix/tex_files/tp1tomean1to6_filt.tex}
+        \end{minipage}
+        \begin{minipage}{0.17\linewidth}
+                \input{matrix/tex_files/tp2tomean1to6_filt.tex}
+        \end{minipage}  
+        \begin{minipage}{0.17\linewidth}
+                \input{matrix/tex_files/tp4tomean1to6_filt.tex}
+        \end{minipage}  
+        \begin{minipage}{0.17\linewidth}
+                \input{matrix/tex_files/tp5tomean1to6_filt.tex}
+        \end{minipage}  
+        \begin{minipage}{0.17\linewidth}
+                \input{matrix/tex_files/tp1tomean1to6_filt.tex}
+        \end{minipage}\vspace{-0.5cm} 
+    \end{figure}
+
+\subsection*{Averaged Images}
+	\vspace*{-0.5cm}\rule{5cm}{0.1mm}
+	
+	\Large{Six MR images using the MEMPRAGE sequence were averaged to produce a single high res MR image and a histogram was also computed. Later, the high res MR image was also filtered using the nonlocal means denoising algorithm, so it could be compared.} 
+	
+    \begin{figure}[!h]
+        \centering
+            \begin{minipage}{0.17\linewidth}
+                \input{figures/meanofsix.tex}
+            \end{minipage}
+            \begin{minipage}{0.17\linewidth}
+                \input{matrix/tex_files/meanofsix.tex}
+        \end{minipage}\hspace{0.5cm}
+        \begin{minipage}{0.17\linewidth}
+                \input{figures/meanofsix_filt.tex}
+            \end{minipage}
+        \begin{minipage}{0.17\linewidth}
+                \input{matrix/tex_files/meanofsix_filt.tex}
+        \end{minipage}
+        \vspace{-0.4cm}
+        
+        \begin{minipage}{0.17\linewidth}
+                \centering \hspace{-15cm} mean of six
+            \end{minipage}
+        \begin{minipage}{0.17\linewidth}
+                \centering mean of six filtered
+            \end{minipage}
+    \end{figure}
+        
+\end{document}
